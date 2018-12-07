@@ -1,0 +1,8 @@
+# VSCode project
+.vs/
+
+# bin files
+DHLWebApiExample/bin/
+
+# object files
+DHLWebApiExample/obj/

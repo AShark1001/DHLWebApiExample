@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CC99E68-AC4E-41CA-831C-DC4B7495ACF5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHLWebApiExample</RootNamespace>
+    <AssemblyName>DHLWebApiExample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DHLApi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Address.cs" />
+    <Compile Include="ViewModels\BkgDetails.cs" />
+    <Compile Include="ViewModels\BkgDetailsResp.cs" />
+    <Compile Include="ViewModels\ChargeTaxAmountDet.cs" />
+    <Compile Include="ViewModels\CountryPostalCode.cs" />
+    <Compile Include="ViewModels\DHLResponse.cs" />
+    <Compile Include="ViewModels\Dutiable.cs" />
+    <Compile Include="ViewModels\MrkSrv.cs" />
+    <Compile Include="ViewModels\Piece.cs" />
+    <Compile Include="ViewModels\QtdSExtrChrgInAdCur.cs" />
+    <Compile Include="ViewModels\QtdShp.cs" />
+    <Compile Include="ViewModels\QtdShpChrg.cs" />
+    <Compile Include="ViewModels\QtdShpExChrg.cs" />
+    <Compile Include="ViewModels\QtdShpExChrgDisc.cs" />
+    <Compile Include="ViewModels\QtdShpResp.cs" />
+    <Compile Include="ViewModels\QtdSInAdCur.cs" />
+    <Compile Include="ViewModels\RequestBase.cs" />
+    <Compile Include="ViewModels\RequestQuote.cs" />
+    <Compile Include="ViewModels\ResponsePieceDetails.cs" />
+    <Compile Include="ViewModels\ResponseAWBInfo.cs" />
+    <Compile Include="ViewModels\ResponseConsignee.cs" />
+    <Compile Include="ViewModels\ResponsePieceInfo.cs" />
+    <Compile Include="ViewModels\ResponsePieces.cs" />
+    <Compile Include="ViewModels\ResponseQuote.cs" />
+    <Compile Include="ViewModels\ResponseShipmentEvent.cs" />
+    <Compile Include="ViewModels\ResponseShipmentInfo.cs" />
+    <Compile Include="ViewModels\ResponseShipper.cs" />
+    <Compile Include="ViewModels\Service.cs" />
+    <Compile Include="ViewModels\ServiceArea.cs" />
+    <Compile Include="ViewModels\ServiceHeader.cs" />
+    <Compile Include="ViewModels\RequestTracking.cs" />
+    <Compile Include="ViewModels\WeightChargeDisc.cs" />
+    <Compile Include="ViewModels\WeightChargeTaxDet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DHLShippingXml\BookPickup_GlobalAP_Valid1_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\BookPickup_GlobalAP_Valid1_Response.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Response.xml" />
+    <Content Include="DHLShippingXml\Shipment_ShipmentValidateRequest_Global_AP_RegularShpmt_Response.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Shipment_Global_AP_RegularShpmt_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\TrackingRequest_MultipleLP_PieceEnabled_B_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\TrackingRequest_SingleAWB_10D.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DHLShippingXml\TrackingResponse_MultipleLP_PieceEnabled_B_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DHLShippingXml\Valid10_Quote_AP_PriceBreakdownRAS.xml" />
+    <Content Include="DHLShippingXml\Valid10_Quote_AP_PriceBreakdownRAS_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid11_Quote_EU_PriceBreakdownRAS.xml" />
+    <Content Include="DHLShippingXml\Valid11_Quote_EU_PriceBreakdownRAS_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid12_Quote_IMPPricebyShipper.xml" />
+    <Content Include="DHLShippingXml\Valid12_Quote_IMPPricebyShipper_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid13_Quote_IMPPricebyReceiver.xml" />
+    <Content Include="DHLShippingXml\Valid13_Quote_IMPPricebyReceiver_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid14_Quote_IMPPriceby3rdParty.xml" />
+    <Content Include="DHLShippingXml\Valid14_Quote_IMPPriceby3rdParty_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid15_Quote_VolWeightHigher.xml" />
+    <Content Include="DHLShippingXml\Valid15_Quote_VolWeightHigher_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid16_Quote_NonEUNonEU_WithAcctProdService.xml" />
+    <Content Include="DHLShippingXml\Valid16_Quote_NonEUNonEU_WithAcctProdService_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid17_Quote_EU_NonEU_WithAcctProdInsurance.xml" />
+    <Content Include="DHLShippingXml\Valid17_Quote_EU_NonEU_WithAcctProdInsurance_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid18_Quote_BRtoUS.xml" />
+    <Content Include="DHLShippingXml\Valid18_Quote_BRtoUS_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid19_Quote_PEtoEG_Suburb.xml" />
+    <Content Include="DHLShippingXml\Valid19_Quote_PEtoEG_Suburb_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid1_Capbility_EUEU_MultipleBkgs_NonDutiable.xml" />
+    <Content Include="DHLShippingXml\Valid20_Quote_BRtoBR_TaxBreakdownPricing.xml" />
+    <Content Include="DHLShippingXml\Valid20_Quote_BRtoBR_TaxBreakdownPricing_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid2_Capability_EUEU_DutiableProd.xml" />
+    <Content Include="DHLShippingXml\Valid3_Capability_EU_NonEU_Dutiable.xml" />
+    <Content Include="DHLShippingXml\Valid3_Capability_EU_NonEU_Dutiable_Response.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid3_Capability_EU_NonEU_Dutiable_Request.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DHLShippingXml\Valid4_Capability_NonEU_EU_Dutiable.xml" />
+    <Content Include="DHLShippingXml\Valid5_Capability_NonEU_NonEU_DiffCountry_Dutiable.xml" />
+    <Content Include="DHLShippingXml\Valid6_Capability_BRUS.xml" />
+    <Content Include="DHLShippingXml\Valid7_Capability_AllServicesIndRes.xml" />
+    <Content Include="DHLShippingXml\Valid8_Capability_PUDeliveryAddsDays.xml" />
+    <Content Include="DHLShippingXml\Valid9_Capability_NonEU_NonEU_WithAcctProdService.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
